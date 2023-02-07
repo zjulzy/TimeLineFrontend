@@ -1,0 +1,77 @@
+# 功能列表
+
+## 界面功能
+
+- `/` 自动转到 `/login.html` 进行登录
+  - 输入账号密码
+  - 登录/新用户自动注册登陆
+  - 登录后跳转到 `/index.html`
+
+- `/index.html`
+  - 退出账号按钮
+  - timeline 表格
+    - 记录项: 时间-任务-重要性
+      - 添加事件 按钮
+      - 修改事件 按钮
+      - 删除事件 按钮
+
+## 通信方式
+
+全部用 json 通信
+
+- 事件描述:
+
+    ```json
+    {   
+        // 由服务器生成的唯一id
+        "task_id": "xxx",
+        "time": "事件戳",
+        "task": "xxx",
+        "priority": "0-10(越大越重要)"
+    }
+    ```
+
+- 总体框架
+  - 登陆之后,服务器回复浏览器一个 `action_token` 作为浏览器的身份凭证
+  - 浏览器断开链接/主动退出登录后 `action_token` 销毁
+
+  - 浏览器发送内容
+
+    ```json
+    {
+        "user": "xxx",
+        "action": "login/logout/query/add/modify/delete",
+
+        "action_info": {
+            // action 为 xxx 时需要的信息
+            // login:
+            "passwd": "xxx",
+            // add:
+            "action_token": "xxx",
+            "time": "事件戳",
+            "task": "xxx",
+            "priority": "0-10(越大越重要)",
+            // modify:
+            "action_token": "xxx",
+            "task_id": "xxx",
+            "time": "事件戳",
+            "task": "xxx",
+            "priority": "0-10(越大越重要)",
+            // delete
+            "action_token": "xxx",
+            "task_id": "xxx", 
+        },
+    }
+    ```
+
+  - 服务器回复内容
+
+      ```json
+      {
+          "action_result": "true/false",
+          "action_info": {
+              // login: 
+              "action_token": "xxx",
+          }
+      }
+      ```
