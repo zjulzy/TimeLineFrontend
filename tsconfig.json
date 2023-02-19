@@ -6,5 +6,8 @@
     "types": [
       "element-plus/global"
     ]
-  }
+  },
+  // "include": [
+  //   "./types/task.d.ts"
+  // ]
 }
