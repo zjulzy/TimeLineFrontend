@@ -1,46 +1,31 @@
-# Time Line Frontend
+# TimelineServer
 
-基于Nuxtjs3与vue3的时间管理程序前端
-> 搭配使用的后端程序地址: [github](https://github.com/yishiyu/TimelineServer),本程序的针对低带宽的适配版本位于[另一分支](https://github.com/zjulzy/TimeLineFrontend/)
+This template should help get you started developing with Vue 3 in Vite.
 
-![gentleparrot](https://cultofthepartyparrot.com/parrots/hd/gentlemanparrot.gif)
-![gentleparrot](https://cultofthepartyparrot.com/parrots/hd/gentlemanparrot.gif)
-![gentleparrot](https://cultofthepartyparrot.com/parrots/hd/gentlemanparrot.gif)
-![gentleparrot](https://cultofthepartyparrot.com/parrots/hd/gentlemanparrot.gif)
-![gentleparrot](https://cultofthepartyparrot.com/parrots/hd/gentlemanparrot.gif)
+[Axios 相关](https://www.koderhq.com/tutorial/vue/http-axios/)
 
-## 基本功能
-本前端程序支持用户通过录入日常工作生活中的重要事项来管理时间轴，帮助每一位用户成为时间管理大师。  
-目前[网站](http://time.lenmain.cn/)已经支持登录，并已经实现了基本功能，其他功能还在绝赞完善中。  
+## Recommended IDE Setup
 
-## Setup
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
 
-使用包管理器安装依赖
+## Customize configuration
 
-```bash
-# yarn
-yarn install
+See [Vite Configuration Reference](https://vitejs.dev/config/).
 
-# npm
+## Project Setup
+
+```sh
 npm install
-
-# pnpm
-pnpm install
 ```
 
-## debug服务器
+### Compile and Hot-Reload for Development
 
-
-```bash
+```sh
 npm run dev
 ```
 
-## 打包
+### Compile and Minify for Production
 
-使用vite打包
-
-```bash
+```sh
 npm run build
 ```
-
-
